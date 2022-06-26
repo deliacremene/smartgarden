@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Garden App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" href="data:,"> -->
+  <!-- include css -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- always include firebase first -->
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+	<!-- include plotly -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- include javascript -->
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="control">
+  <h1>Smart Garden App</h1>
+  <p>Pump state: <strong>%STATE%</strong></p>
+  <p>
+    <a href="/on"><button class="button">ON</button></a>
+    <a href="/off"><button class="button button2">OFF</button></a>
+  </p>
+</div>
+
+  <div class="row">
+    <div class="column">
+      <p>
+        <!-- we use placeholders in between "%" signs and label them with an id such as id="moisture" for %MOISTURE% -->
+        <span class="sensor-labels">Soil moisture:</span>
+        <span id="moisture">%MOISTURE%</span>
+        <sup class="measureunits">&#37</sup>
+      </p>
+      <p>
+        <span class="sensor-labels">Air temperature:</span>
+        <span id="temperature">%TEMPERATURE%</span>
+        <sup class="measureunits">&deg;C</sup>
+      </p>
+      <p>
+        <span class="sensor-labels">Air humidity:</span>
+        <span id="humidity">%HUMIDITY%</span>
+        <sup class="measureunits">&#37;</sup>
+      </p>
+      <!-- add the flower icon -->
+      <img src="%FLOWER%" width="180" height="200">
+      
+    </div>
+
+    <div class="column">
+      <p>
+        <span class="weather-labels">Weather:</span>
+        <span id="owaweather">%OWAWEATHER%</span>
+      </p>
+      <p>
+        <span class="weather-labels">Description:</span>
+        <span id="owadescription">%OWADESCRIPTION%</span>
+      </p>
+      <!-- add the weather icon -->    
+      <img src="http://openweathermap.org/img/wn/%OWAICON%@2x.png">
+ 
+      <p>
+        <span class="weather-labels">Temperature:</span>
+        <span id="owatemperature">%OWATEMPERATURE%</span>
+        <sup class="measureunits">&deg;C</sup>
+      </p> 
+      <p>
+        <span class="weather-labels">Pressure:</span>
+        <span id="owapressure">%OWAPRESSURE%</span>
+        <sup class="measureunits">hPa</sup>
+      </p>
+      <p>
+        <span class="weather-labels">Humidity:</span>
+        <span id="owahumidity">%OWAHUMIDITY%</span>
+        <sup class="measureunits">&#37</sup>
+      </p>
+      <p>
+        <span class="weather-labels">Wind speed:</span>
+        <span id="owawindspeed">%OWAWINDSPEED%</span>
+        <sup class="measureunits">m/s</sup>
+      </p>
+      
+    </div>
+  </div>
+
+  <div id="plot_1" style="width: 100vw; max-height:75vh"></div>
+  <div id="plot_2" style="width: 100vw; max-height:75vh"></div>
+  <div id="plot_3" style="width: 100vw; max-height:75vh"></div>
+
+
+</body>
+
+
+</html>
+

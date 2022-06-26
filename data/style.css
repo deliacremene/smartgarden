@@ -1,0 +1,64 @@
+
+html {
+  font-family: Arial;
+  display: inline-block;
+  margin: 0px auto;
+  text-align: left;
+}
+h1 {
+  color: #037733;
+  padding: 2vh;
+}
+p {
+  font-size: 1.5rem;
+}
+.button {
+  display: inline-block;
+  background-color: #037733;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 16px 40px;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #a30f04;
+}
+.measureunits {
+  font-size: 1.2rem;
+ }
+.sensor-labels {
+  font-size: 1.5rem;
+  /* vertical-align:middle; */
+  padding-bottom: 15px;
+}
+.weather-labels {
+  font-size: 1.5rem;
+  /* vertical-align:middle; */
+  padding-bottom: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.control{
+  text-align: center;
+}
